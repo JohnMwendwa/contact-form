@@ -20,45 +20,63 @@
       <div class="container">
         <h1>Contact Us</h1>
         <form>
+          <div class="input__wrapper">
+            <div class="input__group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first-name" />
+              <span class="error first__error"></span>
+            </div>
+
+            <div class="input__group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last-name" />
+              <span class="error last__error"></span>
+            </div>
+          </div>
+
           <div class="input__group">
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first-name" required />
-
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last-name" required />
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" />
+            <span class="error email__error"></span>
+          </div>
+          <div class="input__group">
+            <label class="query-label">Query Type</label>
+            <div class="query-type">
+              <label for="general">
+                <input
+                  id="general"
+                  type="radio"
+                  name="query-type"
+                  value="general"
+                />
+                <span> General Enquiry</span>
+              </label>
+              <label for="support">
+                <input
+                  id="support"
+                  type="radio"
+                  name="query-type"
+                  value="support"
+                />
+                <span> Support Request</span>
+              </label>
+            </div>
+            <span class="error query__error"></span>
           </div>
 
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required />
-          <label class="query-label">Query Type</label>
-          <div class="query-type">
-            <label for="general">
-              <input
-                id="general"
-                type="radio"
-                name="query-type"
-                value="general"
-              />
-              General Enquiry
-            </label>
-            <label for="support">
-              <input
-                id="support"
-                type="radio"
-                name="query-type"
-                value="support"
-              />
-              Support Request
-            </label>
+          <div class="input__group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+            <span class="error message__error"></span>
           </div>
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <label for="consent">
-            <input id="consent" type="checkbox" name="consent" required />
-            I consent to being contacted by the team
-          </label>
+          <div class="input__group">
+            <label for="consent" class="consent">
+              <input id="consent" type="checkbox" name="consent" />
+              <span> I consent to being contacted by the team</span>
+            </label>
+            <span class="error consent__error"></span>
+          </div>
 
           <button type="submit">Submit</button>
         </form>
